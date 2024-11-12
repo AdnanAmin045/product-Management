@@ -19,7 +19,7 @@ export default function Products() {
 
     const fetchProducts = async () => {
         try {
-            const response = await fetch('http://localhost:5000/products/');
+            const response = await fetch('https://product-management-csh9.onrender.com/products/');
             const data = await response.json();
             setProducts(data);
         } catch (error) {
@@ -39,7 +39,7 @@ export default function Products() {
         e.preventDefault();
         if (isEditing) {
             try {
-                const response = await fetch(`http://localhost:5000/products/${editProductId}`, {
+                const response = await fetch(`https://product-management-csh9.onrender.com/products/${editProductId}`, {
                     method: 'PUT',
                     body: JSON.stringify(productData),
                     headers: { 'Content-Type': 'application/json' },
@@ -74,7 +74,7 @@ export default function Products() {
         } else {
             // Handle Add Product
             try {
-                const response = await fetch('http://localhost:5000/products/', {
+                const response = await fetch('https://product-management-csh9.onrender.com/products/', {
                     method: 'POST',
                     body: JSON.stringify(productData),
                     headers: { 'Content-Type': 'application/json' },
@@ -122,7 +122,7 @@ export default function Products() {
 
     const handleDelete = async (id) => {
         try {
-            const response = await fetch(`http://localhost:5000/products/${id}`, {
+            const response = await fetch(`https://product-management-csh9.onrender.com/products/${id}`, {
                 method: 'DELETE',
             });
 
