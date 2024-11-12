@@ -50,7 +50,7 @@ export default function LogIn() {
     // Function to check credentials with the server
     const checkValues = async (values) => {
         try {
-            const response = await fetch("http://localhost:5000/auth/login", {
+            const response = await fetch("https://product-management-csh9.onrender.com/auth/login", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
