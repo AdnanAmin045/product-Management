@@ -51,7 +51,7 @@ export default function LogIn() {
         e.preventDefault()
         if (!(emptyBoxes(formValuesLogIn))) {
             try {
-                const response = await fetch("http://localhost:5000/auth/signUp", {
+                const response = await fetch("https://product-management-csh9.onrender.com/auth/signUp", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
